@@ -20,11 +20,13 @@
 package org.sonar.java.checks;
 
 import com.google.common.collect.Sets;
+import java.util.Collections;
+import java.util.Set;
 import org.sonar.check.Rule;
-import org.sonar.java.cfg.CFG;
 import org.sonar.java.cfg.LiveVariables;
 import org.sonar.plugins.java.api.JavaFileScanner;
 import org.sonar.plugins.java.api.JavaFileScannerContext;
+import org.sonar.plugins.java.api.cfg.CFG;
 import org.sonar.plugins.java.api.semantic.Symbol;
 import org.sonar.plugins.java.api.tree.AssignmentExpressionTree;
 import org.sonar.plugins.java.api.tree.BaseTreeVisitor;
@@ -36,9 +38,6 @@ import org.sonar.plugins.java.api.tree.IdentifierTree;
 import org.sonar.plugins.java.api.tree.MethodTree;
 import org.sonar.plugins.java.api.tree.Tree;
 import org.sonar.plugins.java.api.tree.VariableTree;
-
-import java.util.Collections;
-import java.util.Set;
 
 @Rule(key = "S1226")
 public class ParameterReassignedToCheck extends BaseTreeVisitor implements JavaFileScanner {

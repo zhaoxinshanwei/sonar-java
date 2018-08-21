@@ -23,18 +23,15 @@ import com.google.common.base.Preconditions;
 import com.google.common.collect.LinkedListMultimap;
 import com.google.common.collect.Maps;
 import com.google.common.collect.Multimap;
-
-import org.sonar.java.se.xproc.MethodYield;
-import org.sonar.plugins.java.api.tree.Tree;
-
-import javax.annotation.Nullable;
-
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedHashSet;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
+import javax.annotation.Nullable;
+import org.sonar.java.se.xproc.MethodYield;
+import org.sonar.plugins.java.api.tree.Tree;
 
 public class ExplodedGraph {
 

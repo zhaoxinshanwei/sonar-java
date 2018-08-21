@@ -195,7 +195,7 @@ public class Instruction {
       return Objects.hash(owner, name, desc, ownerIsInterface);
     }
 
-    public String completeSignature() {
+    public String signature() {
       return Type.getObjectType(owner).getClassName() + "#" + name + desc;
     }
   }

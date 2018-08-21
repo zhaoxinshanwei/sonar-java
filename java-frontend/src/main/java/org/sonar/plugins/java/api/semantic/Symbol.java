@@ -190,6 +190,12 @@ public interface Symbol {
     @Nullable
     Symbol.MethodSymbol overriddenSymbol();
 
+    /**
+     * Signature of the method
+     * @return the full signature of the method, as read from byte code
+     */
+    String signature();
+
     @Nullable
     @Override
     MethodTree declaration();

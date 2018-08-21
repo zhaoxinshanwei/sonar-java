@@ -138,7 +138,7 @@ public class BytecodeCFGBuilderTest {
     SemanticModel.createFor(tree, squidClassLoader);
     Symbol.TypeSymbol innerClass = ((Symbol.TypeSymbol) ((ClassTree) tree.types().get(0)).symbol().lookupSymbols("InnerClass").iterator().next());
     Symbol.MethodSymbol symbol = (Symbol.MethodSymbol) innerClass.lookupSymbols(methodName).iterator().next();
-    return SETestUtils.bytecodeCFG(((JavaSymbol.MethodJavaSymbol) symbol).completeSignature(), squidClassLoader);
+    return SETestUtils.bytecodeCFG(((JavaSymbol.MethodJavaSymbol) symbol).signature(), squidClassLoader);
   }
 
   @Test
@@ -159,7 +159,7 @@ public class BytecodeCFGBuilderTest {
         .collect(Collectors.toCollection(HashMultiset::create));
 
       Symbol methodSymbol = Iterables.getOnlyElement(testClazz.lookupSymbols(method.name));
-      BytecodeCFG bytecodeCFG = SETestUtils.bytecodeCFG(((JavaSymbol.MethodJavaSymbol) methodSymbol).completeSignature(), squidClassLoader);
+      BytecodeCFG bytecodeCFG = SETestUtils.bytecodeCFG(((JavaSymbol.MethodJavaSymbol) methodSymbol).signature(), squidClassLoader);
       Multiset<String> cfgOpcodes = cfgOpcodes(bytecodeCFG);
       assertThat(cfgOpcodes).isEqualTo(opcodes);
     }
@@ -420,7 +420,7 @@ public class BytecodeCFGBuilderTest {
       .filter(s -> methodName.equals(s.name()))
       .findFirst()
       .orElseThrow(IllegalStateException::new);
-    return SETestUtils.bytecodeCFG(((JavaSymbol.MethodJavaSymbol) symbol).completeSignature(), squidClassLoader);
+    return SETestUtils.bytecodeCFG(((JavaSymbol.MethodJavaSymbol) symbol).signature(), squidClassLoader);
   }
 
   private void tryCatch() {

@@ -22,8 +22,8 @@ package org.sonar.java.se;
 import org.junit.Test;
 import org.objectweb.asm.Opcodes;
 import org.sonar.java.bytecode.cfg.Instructions;
-import org.sonar.java.cfg.CFG;
 import org.sonar.java.cfg.CFGTest;
+import org.sonar.plugins.java.api.cfg.CFG;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

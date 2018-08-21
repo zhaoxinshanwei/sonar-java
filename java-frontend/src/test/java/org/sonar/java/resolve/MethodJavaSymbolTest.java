@@ -130,10 +130,10 @@ public class MethodJavaSymbolTest {
         public void visitNode(Tree tree) {
           Symbol.MethodSymbol methodSymbol = (Symbol.MethodSymbol) ((MethodInvocationTree) tree).symbol();
           if(methodSymbol.name().equals("test")) {
-            assertThat(((JavaSymbol.MethodJavaSymbol) methodSymbol).completeSignature())
+            assertThat(((JavaSymbol.MethodJavaSymbol) methodSymbol).signature())
               .isEqualTo("org.sonar.java.resolve.targets.MethodCompleteSignature#test(SJZI[BLjava/lang/Object;CFDLjava/lang/String;)V");
           } else {
-            assertThat(((JavaSymbol.MethodJavaSymbol) methodSymbol).completeSignature())
+            assertThat(((JavaSymbol.MethodJavaSymbol) methodSymbol).signature())
               .isEqualTo("org.sonar.java.resolve.targets.MethodCompleteSignature#test2([Lorg/sonar/java/resolve/targets/MethodCompleteSignature;)[Lorg/sonar/java/resolve/targets/MethodCompleteSignature;");
           }
         }

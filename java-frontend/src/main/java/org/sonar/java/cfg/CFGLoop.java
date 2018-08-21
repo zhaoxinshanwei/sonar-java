@@ -20,17 +20,16 @@
 package org.sonar.java.cfg;
 
 import com.google.common.annotations.VisibleForTesting;
-import org.sonar.java.cfg.CFG.Block;
-import org.sonar.plugins.java.api.tree.Tree;
-
-import javax.annotation.CheckForNull;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import javax.annotation.CheckForNull;
+import org.sonar.plugins.java.api.cfg.CFG;
+import org.sonar.plugins.java.api.cfg.CFG.Block;
+import org.sonar.plugins.java.api.tree.Tree;
 
 public class CFGLoop {
 

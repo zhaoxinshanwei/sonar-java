@@ -30,7 +30,6 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 import org.junit.Test;
 import org.sonar.java.bytecode.loader.SquidClassLoader;
-import org.sonar.java.cfg.CFG;
 import org.sonar.java.resolve.JavaSymbol;
 import org.sonar.java.resolve.SemanticModel;
 import org.sonar.java.se.checks.BooleanGratuitousExpressionsCheck;
@@ -55,6 +54,7 @@ import org.sonar.java.se.xproc.BehaviorCache;
 import org.sonar.java.se.xproc.HappyPathYield;
 import org.sonar.java.se.xproc.MethodBehavior;
 import org.sonar.java.se.xproc.MethodYield;
+import org.sonar.plugins.java.api.cfg.CFG;
 import org.sonar.plugins.java.api.semantic.Symbol;
 import org.sonar.plugins.java.api.semantic.Type;
 import org.sonar.plugins.java.api.tree.AssignmentExpressionTree;
@@ -526,7 +526,7 @@ public class ExplodedGraphWalkerTest {
   }
 
   private static MethodBehavior methodBehaviorForSymbol(Symbol.MethodSymbol symbol) {
-    String signature = ((JavaSymbol.MethodJavaSymbol) symbol).completeSignature();
+    String signature = ((JavaSymbol.MethodJavaSymbol) symbol).signature();
     boolean varArgs = ((JavaSymbol.MethodJavaSymbol) symbol).isVarArgs();
     return new MethodBehavior(signature, varArgs);
   }

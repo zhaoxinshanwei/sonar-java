@@ -112,7 +112,7 @@ public class BehaviorCache {
   }
 
   public MethodBehavior methodBehaviorForSymbol(Symbol.MethodSymbol symbol) {
-    String signature = ((JavaSymbol.MethodJavaSymbol) symbol).completeSignature();
+    String signature = ((JavaSymbol.MethodJavaSymbol) symbol).signature();
     boolean varArgs = ((JavaSymbol.MethodJavaSymbol) symbol).isVarArgs();
     return behaviors.computeIfAbsent(signature, k -> new MethodBehavior(signature, varArgs));
   }
@@ -123,7 +123,7 @@ public class BehaviorCache {
 
   @CheckForNull
   public MethodBehavior get(Symbol.MethodSymbol symbol) {
-    String signature = ((JavaSymbol.MethodJavaSymbol) symbol).completeSignature();
+    String signature = ((JavaSymbol.MethodJavaSymbol) symbol).signature();
     return get(signature, symbol);
   }
 

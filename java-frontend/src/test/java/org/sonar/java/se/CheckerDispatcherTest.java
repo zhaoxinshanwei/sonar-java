@@ -20,13 +20,12 @@
 package org.sonar.java.se;
 
 import com.google.common.collect.Lists;
+import java.util.List;
 import org.junit.Test;
-import org.sonar.java.cfg.CFG;
 import org.sonar.java.se.checks.NullDereferenceCheck;
 import org.sonar.java.se.checks.SECheck;
+import org.sonar.plugins.java.api.cfg.CFG;
 import org.sonar.plugins.java.api.tree.Tree;
-
-import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;

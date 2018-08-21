@@ -25,10 +25,10 @@ import java.util.LinkedList;
 import org.sonar.check.Priority;
 import org.sonar.check.Rule;
 import org.sonar.java.DebugCheck;
-import org.sonar.java.cfg.CFG;
 import org.sonar.java.se.CheckerContext;
 import org.sonar.java.se.CheckerDispatcher;
 import org.sonar.java.se.checks.SECheck;
+import org.sonar.plugins.java.api.cfg.CFG;
 import org.sonar.plugins.java.api.tree.IdentifierTree;
 import org.sonar.plugins.java.api.tree.MethodTree;
 

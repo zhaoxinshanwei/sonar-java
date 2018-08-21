@@ -23,8 +23,9 @@ import java.text.MessageFormat;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
-import org.sonar.java.cfg.CFG.Block;
 import org.sonar.java.model.SyntaxTreeDebug;
+import org.sonar.plugins.java.api.cfg.CFG;
+import org.sonar.plugins.java.api.cfg.CFG.Block;
 import org.sonar.plugins.java.api.tree.Tree;
 import org.sonar.plugins.java.api.tree.Tree.Kind;
 

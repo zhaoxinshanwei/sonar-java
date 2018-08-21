@@ -28,8 +28,8 @@ import java.util.List;
 import java.util.Set;
 import javax.annotation.CheckForNull;
 import org.objectweb.asm.util.Printer;
-import org.sonar.java.cfg.CFG;
 import org.sonar.java.resolve.SemanticModel;
+import org.sonar.plugins.java.api.cfg.CFG;
 import org.sonar.plugins.java.api.semantic.Type;
 
 public class BytecodeCFG {

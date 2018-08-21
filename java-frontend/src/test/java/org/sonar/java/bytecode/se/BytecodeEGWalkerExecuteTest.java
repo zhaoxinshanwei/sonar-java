@@ -40,7 +40,6 @@ import org.sonar.java.bytecode.cfg.BytecodeCFG;
 import org.sonar.java.bytecode.cfg.Instruction;
 import org.sonar.java.bytecode.cfg.Instructions;
 import org.sonar.java.bytecode.loader.SquidClassLoader;
-import org.sonar.java.cfg.CFG;
 import org.sonar.java.resolve.SemanticModel;
 import org.sonar.java.se.ProgramPoint;
 import org.sonar.java.se.ProgramState;
@@ -58,6 +57,7 @@ import org.sonar.java.se.xproc.BehaviorCache;
 import org.sonar.java.se.xproc.HappyPathYield;
 import org.sonar.java.se.xproc.MethodBehavior;
 import org.sonar.java.se.xproc.MethodYield;
+import org.sonar.plugins.java.api.cfg.CFG;
 import org.sonar.plugins.java.api.semantic.Type;
 import org.sonar.plugins.java.api.tree.CompilationUnitTree;
 

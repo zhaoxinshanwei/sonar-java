@@ -20,10 +20,9 @@
 package org.sonar.java.se;
 
 import com.google.common.base.Preconditions;
-import org.sonar.java.cfg.CFG;
-import org.sonar.plugins.java.api.tree.Tree;
-
 import java.util.List;
+import org.sonar.plugins.java.api.cfg.CFG;
+import org.sonar.plugins.java.api.tree.Tree;
 
 public class ProgramPoint {
   private final int hashcode;

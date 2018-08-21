@@ -19,15 +19,13 @@
  */
 package org.sonar.java.se;
 
+import java.util.Collections;
+import java.util.Set;
 import org.junit.Test;
-
-import org.sonar.java.cfg.CFG;
 import org.sonar.java.cfg.CFGTest;
 import org.sonar.java.se.constraint.ObjectConstraint;
 import org.sonar.java.se.symbolicvalues.SymbolicValue;
-
-import java.util.Collections;
-import java.util.Set;
+import org.sonar.plugins.java.api.cfg.CFG;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

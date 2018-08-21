@@ -19,15 +19,15 @@
  */
 package org.sonar.java.cfg;
 
-import org.junit.Test;
-import org.sonar.java.cfg.CFG.Block;
-import org.sonar.plugins.java.api.tree.Tree;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+import org.junit.Test;
+import org.sonar.plugins.java.api.cfg.CFG;
+import org.sonar.plugins.java.api.cfg.CFG.Block;
+import org.sonar.plugins.java.api.tree.Tree;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

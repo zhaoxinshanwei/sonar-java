@@ -44,7 +44,6 @@ import javax.annotation.Nullable;
 import org.sonar.api.utils.log.Logger;
 import org.sonar.api.utils.log.Loggers;
 import org.sonar.java.DebugCheck;
-import org.sonar.java.cfg.CFG;
 import org.sonar.java.cfg.LiveVariables;
 import org.sonar.java.matcher.MethodMatcher;
 import org.sonar.java.matcher.MethodMatcherCollection;
@@ -73,6 +72,7 @@ import org.sonar.java.se.xproc.BehaviorCache;
 import org.sonar.java.se.xproc.MethodBehavior;
 import org.sonar.java.se.xproc.MethodYield;
 import org.sonar.plugins.java.api.JavaFileScanner;
+import org.sonar.plugins.java.api.cfg.CFG;
 import org.sonar.plugins.java.api.semantic.Symbol;
 import org.sonar.plugins.java.api.semantic.Type;
 import org.sonar.plugins.java.api.tree.ArrayAccessExpressionTree;
@@ -1194,6 +1194,6 @@ public class ExplodedGraphWalker {
 
   @CheckForNull
   protected MethodBehavior peekMethodBehavior(Symbol.MethodSymbol symbol) {
-    return behaviorCache.peek(((JavaSymbol.MethodJavaSymbol) symbol).completeSignature());
+    return behaviorCache.peek(((JavaSymbol.MethodJavaSymbol) symbol).signature());
   }
 }

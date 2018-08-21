@@ -26,13 +26,13 @@ import java.util.Set;
 import org.sonar.check.Priority;
 import org.sonar.check.Rule;
 import org.sonar.java.DebugCheck;
-import org.sonar.java.cfg.CFG;
 import org.sonar.java.se.CheckerContext;
 import org.sonar.java.se.CheckerDispatcher;
 import org.sonar.java.se.Flow;
 import org.sonar.java.se.checks.SECheck;
 import org.sonar.java.se.xproc.MethodBehavior;
 import org.sonar.plugins.java.api.JavaFileScannerContext;
+import org.sonar.plugins.java.api.cfg.CFG;
 import org.sonar.plugins.java.api.tree.IdentifierTree;
 import org.sonar.plugins.java.api.tree.MethodTree;
 

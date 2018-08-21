@@ -17,7 +17,7 @@
  * along with this program; if not, write to the Free Software Foundation,
  * Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
-package org.sonar.java.cfg;
+package org.sonar.plugins.java.api.cfg;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
@@ -418,6 +418,7 @@ public class CFG {
   public static CFG buildCFG(List<? extends Tree> trees) {
     return new CFG(trees, null, false);
   }
+
   public static CFG build(MethodTree tree) {
     BlockTree block = tree.block();
     Preconditions.checkArgument(block != null, "Cannot build CFG for method with no body.");

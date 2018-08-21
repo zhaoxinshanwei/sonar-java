@@ -21,26 +21,6 @@ package org.sonar.java.se.checks;
 
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
-
-import org.sonar.check.Rule;
-import org.sonar.java.cfg.CFG;
-import org.sonar.java.se.CheckerContext;
-import org.sonar.java.se.Flow;
-import org.sonar.java.se.constraint.Constraint;
-import org.sonar.java.se.constraint.ConstraintManager;
-import org.sonar.java.se.constraint.ConstraintsByDomain;
-import org.sonar.java.se.symbolicvalues.SymbolicValue;
-import org.sonar.plugins.java.api.JavaFileScannerContext;
-import org.sonar.plugins.java.api.tree.BaseTreeVisitor;
-import org.sonar.plugins.java.api.tree.ClassTree;
-import org.sonar.plugins.java.api.tree.LambdaExpressionTree;
-import org.sonar.plugins.java.api.tree.MethodTree;
-import org.sonar.plugins.java.api.tree.ReturnStatementTree;
-import org.sonar.plugins.java.api.tree.Tree;
-import org.sonar.plugins.java.api.tree.TypeTree;
-
-import javax.annotation.Nullable;
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -49,6 +29,23 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
+import javax.annotation.Nullable;
+import org.sonar.check.Rule;
+import org.sonar.java.se.CheckerContext;
+import org.sonar.java.se.Flow;
+import org.sonar.java.se.constraint.Constraint;
+import org.sonar.java.se.constraint.ConstraintManager;
+import org.sonar.java.se.constraint.ConstraintsByDomain;
+import org.sonar.java.se.symbolicvalues.SymbolicValue;
+import org.sonar.plugins.java.api.JavaFileScannerContext;
+import org.sonar.plugins.java.api.cfg.CFG;
+import org.sonar.plugins.java.api.tree.BaseTreeVisitor;
+import org.sonar.plugins.java.api.tree.ClassTree;
+import org.sonar.plugins.java.api.tree.LambdaExpressionTree;
+import org.sonar.plugins.java.api.tree.MethodTree;
+import org.sonar.plugins.java.api.tree.ReturnStatementTree;
+import org.sonar.plugins.java.api.tree.Tree;
+import org.sonar.plugins.java.api.tree.TypeTree;
 
 @Rule(key = "S3516")
 public class InvariantReturnCheck extends SECheck {

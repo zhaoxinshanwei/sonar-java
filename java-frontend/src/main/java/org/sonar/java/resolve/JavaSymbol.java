@@ -551,7 +551,8 @@ public class JavaSymbol implements Symbol {
       this.typeVariableTypes = Lists.newArrayList();
     }
 
-    public String completeSignature(){
+    @Override
+    public String signature() {
       String sign = "";
       if(owner != null) {
         sign += owner.getType().fullyQualifiedName();

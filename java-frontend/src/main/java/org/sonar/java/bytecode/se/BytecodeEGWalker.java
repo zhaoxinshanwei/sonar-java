@@ -755,7 +755,7 @@ public class BytecodeEGWalker {
     // TODO use constraintManager.createMethodSymbolicValue to create relational SV for equals
     programState = pop.state;
     SymbolicValue returnSV = instruction.hasReturnValue() ? constraintManager.createSymbolicValue(instruction) : null;
-    String signature = instruction.fieldOrMethod.completeSignature();
+    String signature = instruction.fieldOrMethod.signature();
     MethodBehavior methodInvokedBehavior = behaviorCache.get(signature);
     enqueueUncheckedExceptions();
     // FIXME : empty yields here should not happen, for now act as if behavior was not resolved.
