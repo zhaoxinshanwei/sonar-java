@@ -55,6 +55,7 @@ import org.sonar.java.checks.security.IntegerToHexStringCheck;
 import org.sonar.java.checks.security.LDAPAuthenticatedConnectionCheck;
 import org.sonar.java.checks.security.LDAPDeserializationCheck;
 import org.sonar.java.checks.security.RegexHotspotCheck;
+import org.sonar.java.checks.security.LogConfigurationCheck;
 import org.sonar.java.checks.security.SMTPSSLServerIdentityCheck;
 import org.sonar.java.checks.security.SecureCookieCheck;
 import org.sonar.java.checks.security.SecureXmlTransformerCheck;
@@ -617,6 +618,7 @@ public final class CheckList {
       .add(ExecCallCheck.class)
       .add(EmptyDatabasePasswordCheck.class)
       .add(StreamPeekCheck.class)
+      .add(LogConfigurationCheck.class)
       .add(VolatileNonPrimitiveFieldCheck.class)
       .add(GetClassLoaderCheck.class)
       .add(ObjectOutputStreamCheck.class)
